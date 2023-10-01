@@ -6,9 +6,12 @@
 3. [Implementation Details](#implementation-details)
 4. [Model Architectures](#model-architectures)
 5. [Evaluation Metrics](#evaluation-metrics)
-6. [Environment Setup](#environment-setup)
-7. [Tools Used](#tools-used)
-8. [How to Run](#how-to-run)
+6. [Performance Overview](#performance-overview)
+7. [Environment Setup](#environment-setup)
+8. [Tools Used](#tools-used)
+9. [How to Run](#how-to-run)
+10. [Pre-trained Models](#pre-trained-models)
+11. [Final Conclusion](#final-conclusion)
 
 ## Introduction
 
@@ -48,6 +51,17 @@ The models' performances will be evaluated based on the following metrics, compu
 
 The project will also include visualizations and logs to track the model's performance during training and validation phases. TensorBoard will be used for monitoring.
 
+## Performance Overview
+
+Here are the summarized metrics for the models:
+
+| Metric     | Simple CNN | ResNet | DenseNet |
+|------------|------------|--------|----------|
+| Accuracy   | 83.60%     | 88.23% | 85.80%   |
+| Precision  | 83.85%     | 88.41% | 86.34%   |
+| Recall     | 83.80%     | 88.44% | 85.92%   |
+| F1 Score   | 83.77%     | 88.34% | 85.84%   |
+
 ## Environment Setup
 
 - Conda will be used for package management and to set up the environment.
@@ -65,3 +79,15 @@ The project will also include visualizations and logs to track the model's perfo
 
 Instructions for setting up the environment and running the notebook will be provided here.
 
+## Pre-trained Models
+
+If you wish to skip the training process, pre-trained models are available for each architecture. You can find them as follows:
+- `best_densenet_model.pth`: Pre-trained DenseNet model.
+- `best_resnet_model.pth`: Pre-trained ResNet model.
+- `best_simple_cnn_model.pth`: Pre-trained SimpleCNN model.
+
+To use these models, simply load them using PyTorch's `torch.load()` function.
+
+## Final Conclusion
+
+Through extensive experimentation with different neural network architectures, we've obtained valuable insights into scene classification. Despite variances in model complexity and performance metrics, each of the three examined models—SimpleCNN, ResNet, and DenseNet—proved competent in solving the task at hand, albeit with varying degrees of success. Notably, we found some classes that were consistently misclassified across all models, indicating room for further investigation. It appears that the challenges here might lie within the dataset itself rather than the classifiers. We invite readers to delve into the specifics and draw their own conclusions.
